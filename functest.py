@@ -6,12 +6,12 @@ assert str(x) == '.............'
 y = Hand('test')
 assert str(y) == 'test'
 
-z = Hand('test'*4)
-try:
-    assert str(z) == 'test'*4
-except AssertionError:
-    # expected failure
-    print ('str(z) failed')
-
 x = Hand('akq.jt9.876.5432')
-assert str(x) == 'akq.jt9.876.5432'
+assert str(x) == 'abcqrsGHIWXYZ'
+
+y = Hand('+-*./09.876.1111')
+assert str(y) == 'abcqrsGHIZZZZ'
+assert y.hcp() == 10
+
+z = Hand('aq3.kj4.a543.q43')
+assert z.hcp() == 16
