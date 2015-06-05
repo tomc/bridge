@@ -15,3 +15,5 @@ assert y.hcp() == 10
 
 z = Hand('aq3.kj4.a543.q43')
 assert z.hcp() == 16
+
+# quick comment just to change the file, testing gitlab
